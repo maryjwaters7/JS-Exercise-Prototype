@@ -94,8 +94,6 @@ Car.prototype.drive = function(distance) {
     this.odometer = this.odometer += distance;
     this.tank = (this.tank - howMuchGas)
   } else {
-    // let outOfGas = (distance - howFar);
-    // let where = (this.odometer + outOfGas);
     this.odometer = howFar;
     this.tank = 0;
     return `I ran out of fuel at ${howFar} miles!`
@@ -127,10 +125,15 @@ Baby.prototype.play = function(x) {
   TASK 4
 
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+
+  1. Global Binding - when using this in a function that is in the global scope, this is the window/console
+
+  2. Implicit Binding - when an object is inside a function and is using this and the function is called with a dot, the object before the dot when called is the this value
+
+  3. New Binding - when this is being used in a constructor function ro create a new object, this is the specific instance of the object when it is called/created using the new keyword
+
+  4. Explicit Binding - when a function is called using Javasctipt's .call or .apply methods the value of this is explicity called when the methods are used
+  
 */
 
 
